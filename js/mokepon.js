@@ -1,5 +1,7 @@
 let ataqueJugador 
 let ataqueEnemigo
+let vidasJugador = 3
+let vidasEnemigo = 3
 
 function iniciarJuego (){
     let botonMascotaJugador = document.getElementById('boton-mascota')
@@ -86,23 +88,51 @@ function ataqueAleatorioEnemigo () {
 }
 
 function conbate() {
+
+    let spanVidasJugador = document.getElementById('vidas-jugador')
+    let spanVidasEnemigo = document.getElementById('vidas-enemigo')
+
     if (ataqueEnemigo == ataqueJugador){
         crearMensaje('Empate')
     } else if (ataqueJugador == 'FUEGO' && ataqueEnemigo == 'TIERRA'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'AGUA' && ataqueEnemigo == 'FUEGO'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else if (ataqueJugador == 'TIERRA' && ataqueEnemigo == 'AGUA'){
         crearMensaje('Ganaste')
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
     } else {
         crearMensaje('Perdiste')
+        vidasJugador-- 
+        spanVidasJugador.innerHTML = vidasJugador
     }
+    revisarVidas()
+}
+function revisarVidas() {
+    if (vidasEnemigo == 0){
+        crearMensajeFinal("Felicitaciones! GANASTE")
+    } else if (vidasJugador == 0){
+        crearMensajeFinal("Lo siento perdiste")
+    }       
 }
 
 function crearMensaje(resultado) {
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mascota atacó con ' +  ataqueJugador + ', la mascota del enemigo atacó con ' + ataqueEnemigo   + resultado 
+    parrafo.innerHTML = 'Tu mascota atacó con ' +  ataqueJugador + ', la mascota del enemigo atacó con ' + ataqueEnemigo +'- ' + resultado 
+
+    sectionMensajes.appendChild(parrafo)
+}
+
+function crearMensajeFinal(resultadoFinal) {
+    let sectionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML =  resultadoFinal
 
     sectionMensajes.appendChild(parrafo)
 }
