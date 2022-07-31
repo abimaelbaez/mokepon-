@@ -4,7 +4,6 @@ const botonMascotaJugador = document.getElementById('boton-mascota')
 const botonFuego = document.getElementById('boton-fuego')
 const botonAgua = document.getElementById('boton-agua')
 const botonTierra = document.getElementById('boton-tierra')
-sectionReiniciar.style.display = 'none'
 const botonReiniciar = document.getElementById('boton-reiniciar')
 
 const sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
@@ -31,11 +30,33 @@ let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
 
+class Mokepon {
+    constructor(nombre, foto, vida) {
+        this.nombre = nombre
+        this.foto = foto
+        this.vida = vida
+    }
+}
+
+let hipodoge = new Mokepon('Hipodoge', './assets/mokepons_mokepon_hipodoge_attack.png', 5)
+
+let capipepo = new Mokepon('Capipepo', './assets/mokepons_mokepon_capipepo_attack.png', 5)
+
+let ratigueya = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 5)
+
+let langostelvis = new Mokepon('Langostelvis', './assets/kisspng-lobster-chef-cartoon-5aef593a249586.9266995015256353861499.png', 5)
+
+let tucapalma = new Mokepon('Tucapalma', './assets/kindpng_2584280.png', 5)
+
+let pydos = new Mokepon('Pydos', './assets/pinpng.com-ducks-png-1410209.png', 5)
+
+
+
 function iniciarJuego (){
 
     
     sectionSeleccionarAtaque.style.display = 'none'
-    
+    sectionReiniciar.style.display = 'none'
 
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
     
