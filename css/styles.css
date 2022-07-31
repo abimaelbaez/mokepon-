@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Poppins:wght@300&display=swap');
+body {
+    
+    font-family: 'Poppins', sans-serif;
+    background-color: #192965;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo {
+    color: white;
+    font-size: 32px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+}
+.subtitulo {
+    color: white;
+    font-size: 24px;
+}
+.tarjetas {
+    display: flex;
+    gap: 10px;
+}
+.tarjeta-mokepon {
+    width: 180px;
+    height: 109px;
+    background-color: #F0EFEF;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #192965;
+    cursor: pointer;
+}
+.tarjeta-mokepon img {
+    width: 80px;
+}
+.tarjeta-mokepon:hover {
+    background-color: #BBCFFF;
+}
+#boton-mascota {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    margin-top: 30px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 1em;
+   
+}
+#boton-mascota:hover {
+    background-color: #E25822;
+}
+input {
+    display: none;
+}
+input:checked + label {
+    background-color: #BBCFFF;
+}
+#seleccionar-ataque {
+    flex-direction: column;
+    align-items: center;
+}
+.boton-de-ataque {
+    background-color: #E25822;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    border: transparent;
+    width: 150px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    display: flex;
+    display: inline-block;
+    gap: 10px;
+}
+.boton-de-ataque:hover {
+    background-color: #BBCFFF;
+}
+#mensajes {
+    width: 280px;
+    background: #BBCFFF;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+#boton-reiniciar {
+    border: none;
+    background-color: #E25822;
+    width: 120px;
+    margin: 20px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    font-size: 1em;
+}
+#boton-reiniciar:hover {
+    background-color: red;
+} 
+.ataques {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    text-align: justify;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 360px) {
+    .tarjetas {
+        flex-direction: column;
+    }
+    .boton-de-ataque {
+        flex-direction: column;
+        margin-top: 10px;
+        display: flex;
+    }
+}
