@@ -15,36 +15,36 @@
         <h1 class="titulo">Mokepon!🔥 💦 🌱</h1>
         <h2 class="subtitulo">Elige tu mascota:</h2>
         <div class="tarjetas">
+            <input type="radio" name="mascota" id="hipodoge">
             <label class="tarjeta-mokepon" for="hipodoge">
                <p>Hipodoge</p>
                <img src="./assets/mokepons_mokepon_hipodoge_attack.png" alt="">
              </label>
-            <input type="radio" name="mascota" id="hipodoge">
+             <input type="radio" name="mascota" id="capipepo">
             <label class="tarjeta-mokepon" for="capipepo">
                <p>Capipepo</p>
                <img src="./assets/mokepons_mokepon_capipepo_attack.png" alt="">
              </label>
-            <input type="radio" name="mascota" id="capipepo">
+             <input type="radio" name="mascota" id="ratigueya">
             <label class="tarjeta-mokepon" for="ratigueya">
                <p>Ratigueya</p>
                <img src="./assets/mokepons_mokepon_ratigueya_attack.png" alt="">
              </label>
-            <input type="radio" name="mascota" id="ratigueya">
+             <input type="radio" name="mascota" id="langostelvis">
             <label class="tarjeta-mokepon" for="langostelvis">
                <p>Langostelvis</p>
                <img src="./assets/kisspng-lobster-chef-cartoon-5aef593a249586.9266995015256353861499.png" alt="">
              </label>
-            <input type="radio" name="mascota" id="langostelvis">
+             <input type="radio" name="mascota" id="tucapalma">
             <label class="tarjeta-mokepon" for="tucapalma">
                <p>Tucapalma</p>
                <img src="./assets/kindpng_2584280.png" alt="">
              </label>
-            <input type="radio" name="mascota" id="tucapalma">
+             <input type="radio" name="mascota" id="pydos">
             <label class="tarjeta-mokepon" for="pydos">
                <p>Pydos</p>
                <img src="./assets/pinpng.com-ducks-png-1410209.png" style="width:60px;" alt="">
              </label>
-            <input type="radio" name="mascota" id="pydos">
         </div>
 
         <button id="boton-mascota">Seleccionar</button>
@@ -66,15 +66,18 @@
                 </section>
             </div>
 
-        <div>
-            <div id="ataquesDelJugador"></div>
-            <div id="ataquesDelEnemigo"></div>
-            <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
-        <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
+        <div class="ataques">
+            <div>
+                <p id="vidas-jugador">3</p>
+                <p id="mascota-jugador"></p>
+                <div id="ataquesDelJugador"></div>
+            </div>
+            <div>
+                <p id="vidas-enemigo">3</p>
+                <p id="mascota-enemigo"></p>
+                <div id="ataquesDelEnemigo"></div>
+            </div>
         </div>
-        
-    </section>
-
-   
-</body>
+        </section>
+    </body>
 </html>
