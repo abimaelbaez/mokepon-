@@ -24,7 +24,7 @@ const sectionMensajes = document.getElementById('resultado')
 const ataquesDelJugador = document.getElementById('ataquesDelJugador')
 const ataquesDelEnemigo = document.getElementById('ataquesDelEnemigo')
 
-
+let mokepones = []
 let ataqueJugador 
 let ataqueEnemigo
 let vidasJugador = 3
@@ -50,7 +50,7 @@ let tucapalma = new Mokepon('Tucapalma', './assets/kindpng_2584280.png', 5)
 
 let pydos = new Mokepon('Pydos', './assets/pinpng.com-ducks-png-1410209.png', 5)
 
-
+mokepones.push(hipodoge,capipepo,ratigueya,langostelvis,tucapalma,pydos)
 
 function iniciarJuego (){
 
