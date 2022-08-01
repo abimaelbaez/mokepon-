@@ -35,6 +35,7 @@ class Mokepon {
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
+        this.ataques = []
     }
 }
 
@@ -50,7 +51,53 @@ let tucapalma = new Mokepon('Tucapalma', './assets/kindpng_2584280.png', 5)
 
 let pydos = new Mokepon('Pydos', './assets/pinpng.com-ducks-png-1410209.png', 5)
 
-mokepones.push(hipodoge,capipepo,ratigueya,langostelvis,tucapalma,pydos)
+hipodoge.ataques.push(
+    { nombre: '💦 ', id: 'boton-agua'},
+    { nombre: '💦 ', id: 'boton-agua'},
+    { nombre: '💦 ', id: 'boton-agua'},
+    { nombre: '🔥 ', id: 'boton-fuego'},
+    { nombre: '🌱 ', id: 'boton-tierra'},
+)
+
+capipepo.ataques.push(
+    { nombre: '🔥 ', id: 'boton-fuego'},
+    { nombre: '🔥 ', id: 'boton-fuego'},
+    { nombre: '🔥 ', id: 'boton-fuego'},
+    { nombre: '💦 ', id: 'boton-agua'},
+    { nombre: '🌱 ', id: 'boton-tierra'},
+)
+
+ratigueya.ataques.push(
+    { nombre: '🌱 ', id: 'boton-tierra'},
+    { nombre: '🌱 ', id: 'boton-tierra'},
+    { nombre: '🌱 ', id: 'boton-tierra'},
+    { nombre: '💦 ', id: 'boton-agua'},
+    { nombre: '🔥 ', id: 'boton-fuego'},
+)
+
+langostelvis.ataques.push(
+    { nombre: '💦 ', id: 'boton-agua'},
+    { nombre: '💦 ', id: 'boton-agua'},
+    { nombre: '💦 ', id: 'boton-agua'},
+    { nombre: '🌱 ', id: 'boton-tierra'},
+    { nombre: '🔥 ', id: 'boton-fuego'},
+)
+
+tucapalma.ataques.push(
+    { nombre: '🔥 ', id: 'boton-fuego'},
+    { nombre: '💦 ', id: 'boton-agua'},
+    { nombre: '🔥 ', id: 'boton-fuego'},
+    { nombre: '🌱 ', id: 'boton-tierra'},
+    { nombre: '🔥 ', id: 'boton-fuego'},
+)
+
+pydos.ataques.push(
+    { nombre: '🌱 ', id: 'boton-tierra'},
+    { nombre: '🌱 ', id: 'boton-tierra'},
+    { nombre: '🌱 ', id: 'boton-tierra'},
+    { nombre: '💦 ', id: 'boton-agua'},
+    { nombre: '💦 ', id: 'boton-agua'},
+)
 
 function iniciarJuego (){
 
