@@ -23,10 +23,13 @@ const spanVidasEnemigo = document.getElementById('vidas-enemigo')
 const sectionMensajes = document.getElementById('resultado')
 const ataquesDelJugador = document.getElementById('ataquesDelJugador')
 const ataquesDelEnemigo = document.getElementById('ataquesDelEnemigo')
+const contenedorTarjetas = document.getElementById('contenedorTarjetas')
 
 let mokepones = []
 let ataqueJugador 
 let ataqueEnemigo
+let opcionDeMokepones
+
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -99,10 +102,24 @@ pydos.ataques.push(
     { nombre: '💦 ', id: 'boton-agua'},
 )
 
+mokepones.push(hipodoge,capipepo,ratigueya,langostelvis,tucapalma,pydos)
+
 function iniciarJuego (){
 
     
     sectionSeleccionarAtaque.style.display = 'none'
+
+    mokepones.forEach((mokepon) => {
+        opcionDeMokepones = `
+        <input type="radio" name="mascota" id=${mokepon.nombre}>
+        <label class="tarjeta-mokepon" for=${mokepon.nombre}>
+           <p>${mokepon.nombre}</p>
+           <img src=${mokepon.foto} alt=${mokepon.nombre}>
+         </label>
+        `
+    contenedorTarjetas.innerHTML += opcionDeMokepones 
+    })
+
     sectionReiniciar.style.display = 'none'
 
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
