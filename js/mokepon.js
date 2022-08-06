@@ -150,17 +150,17 @@ function seleccionarMascotaJugador () {
     
 
     if (inputHipodoge.checked) {
-        spanMascotaJugador.innerHTML = 'Hipodoge'
+        spanMascotaJugador.innerHTML = inputHipodoge.id
     } else if (inputCapipepo.checked){
-        spanMascotaJugador.innerHTML = 'Capipepo'
+        spanMascotaJugador.innerHTML = inputCapipepo.id
     } else if (inputRatigueya.checked){
-        spanMascotaJugador.innerHTML = 'Ratigueya'
+        spanMascotaJugador.innerHTML = inputRatigueya.id
     } else if (inputLangostelvis.checked){
-        spanMascotaJugador.innerHTML = 'Langostelvis'
+        spanMascotaJugador.innerHTML = inputLangostelvis.id
     } else if (inputPydos.checked){
-        spanMascotaJugador.innerHTML = 'Pydos'
+        spanMascotaJugador.innerHTML = inputPydos.id
     } else if (inputTucapalma.checked){
-        spanMascotaJugador.innerHTML = 'Tucapalma'
+        spanMascotaJugador.innerHTML = inputTucapalma.id
     } else {
         alert('Selecciona una de las Mascotas')
     }
