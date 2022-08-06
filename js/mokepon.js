@@ -167,22 +167,10 @@ function seleccionarMascotaJugador () {
     seleccionarMascotaEnemigo ()
 }
 function seleccionarMascotaEnemigo () {
-    let mascotaAleatorio = aleatorio(1,6)
+    let mascotaAleatoria = aleatorio(0, mokepones.length - 1)
     
 
-    if (mascotaAleatorio == 1) {
-        spanMascotaEnemigo.innerHTML = 'Hipodoge'
-    } else if (mascotaAleatorio == 2) {
-        spanMascotaEnemigo.innerHTML = 'Capipepo'
-    } else if (mascotaAleatorio == 3) {
-        spanMascotaEnemigo.innerHTML = 'Ratigueya'
-    } else if (mascotaAleatorio == 4){
-        spanMascotaEnemigo.innerHTML = 'langostelvis'
-    } else if (mascotaAleatorio == 5){
-        spanMascotaEnemigo.innerHTML = 'Pydos'
-    } else if (mascotaAleatorio == 6){
-        spanMascotaEnemigo.innerHTML = 'Tucapalma'
-    }
+    spanMascotaEnemigo.innerHTML = mokepones [mascotaAleatoria].nombre
 }
 
 function ataqueFuego() {
