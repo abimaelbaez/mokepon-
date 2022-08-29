@@ -52,33 +52,56 @@ let mapaBackround = new Image()
 mapaBackround.src = './assets/mokemap.png'
 
 class Mokepon {
-    constructor(nombre, foto, vida) {
+    constructor(nombre, foto, vida, fotoMapa, x = 10, y =10 ) {
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
         this.ataques = []
-        this.x = 20 
-        this.y = 30
+        this.x = x
+        this.y = y
         this.ancho = 80
         this.alto = 80
         this.mapaFoto = new Image()
-        this.mapaFoto.src = foto 
+        this.mapaFoto.src = fotoMapa 
         this.velocidadX = 0
         this.velocidadY = 0
     }
+
+    pintarMokepon() {
+        lienzo.drawImage(
+            this.mapaFoto,
+            this.x,
+            this.y,
+            this.ancho,
+            this.alto
+        )
+    }
+
 }
 
-let hipodoge = new Mokepon('Hipodoge', './assets/mokepons_mokepon_hipodoge_attack.png', 5)
+let hipodoge = new Mokepon('Hipodoge', './assets/mokepons_mokepon_hipodoge_attack.png', 5, './assets/mokepons_mokepon_hipodoge_attack.png')
 
-let capipepo = new Mokepon('Capipepo', './assets/mokepons_mokepon_capipepo_attack.png', 5)
+let capipepo = new Mokepon('Capipepo', './assets/mokepons_mokepon_capipepo_attack.png', 5, './assets/mokepons_mokepon_capipepo_attack.png')
 
-let ratigueya = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 5)
+let ratigueya = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 5, './assets/mokepons_mokepon_ratigueya_attack.png')
 
-let viudanegra = new Mokepon('Viudanegra', './assets/araña-2.png', 5)
+let viudanegra = new Mokepon('Viudanegra', './assets/araña-2.png', 5, './assets/araña-2.png')
 
-let chinchilla = new Mokepon('Chinchilla', './assets/chinche.png', 5)
+let chinchilla = new Mokepon('Chinchilla', './assets/chinche.png', 5, './assets/chinche.png')
 
-let antman = new Mokepon('Antman', './assets/hormiga.png', 5)
+let antman = new Mokepon('Antman', './assets/hormiga.png', 5, './assets/hormiga.png')
+
+let hipodogeEnemigo = new Mokepon('Hipodoge', './assets/mokepons_mokepon_hipodoge_attack.png', 5, './assets/mokepons_mokepon_hipodoge_attack.png', 80, 120)
+
+let capipepoEnemigo = new Mokepon('Capipepo', './assets/mokepons_mokepon_capipepo_attack.png', 5, './assets/mokepons_mokepon_capipepo_attack.png', 150, 95)
+
+let ratigueyaEnemigo = new Mokepon('Ratigueya', './assets/mokepons_mokepon_ratigueya_attack.png', 5, './assets/mokepons_mokepon_ratigueya_attack.png', 200, 40)
+
+let viudanegraEnemigo = new Mokepon('Viudanegra', './assets/araña-2.png', 5, './assets/araña-2.png', 600, 140)
+
+let chinchillaEnemigo = new Mokepon('Chinchilla', './assets/chinche.png', 5, './assets/chinche.png', 100, 400)
+
+let antmanEnemigo = new Mokepon('Antman', './assets/hormiga.png', 5, './assets/hormiga.png', 300, 20)
 
 hipodoge.ataques.push(
     { nombre: '💧', id: 'boton-agua' },
@@ -377,13 +400,13 @@ function pintarCanvas() {
         mapa.width,
         mapa.height
     )
-    lienzo.drawImage(
-        mascotaJugadorObjeto.mapaFoto,
-        mascotaJugadorObjeto.x,
-        mascotaJugadorObjeto.y,
-        mascotaJugadorObjeto.ancho,
-        mascotaJugadorObjeto.alto
-    )
+    mascotaJugadorObjeto.pintarMokepon()
+    hipodogeEnemigo.pintarMokepon()
+    capipepoEnemigo.pintarMokepon()
+    ratigueyaEnemigo.pintarMokepon()
+    viudanegraEnemigo.pintarMokepon()
+    antmanEnemigo.pintarMokepon()
+    chinchillaEnemigo.pintarMokepon()
 }
 
 
@@ -428,8 +451,8 @@ function sePrecionoUnaTecla(event) {
 }
 
 function iniciarMapa() {
-    mapa.width = 400
-    mapa.height = 300
+    mapa.width = 800
+    mapa.height = 700
     mascotaJugadorObjeto = obtenerObjetoMascota(mascotaJugador)
     intervalo = setInterval(pintarCanvas, 50)
     
