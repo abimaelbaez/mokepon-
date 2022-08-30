@@ -1,0 +1,22 @@
+{
+  "name": "mokepon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abimaelbaez/mokepon-.git"
+  },
+  "author": "Abimael Baez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abimaelbaez/mokepon-/issues"
+  },
+  "homepage": "https://github.com/abimaelbaez/mokepon-#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
